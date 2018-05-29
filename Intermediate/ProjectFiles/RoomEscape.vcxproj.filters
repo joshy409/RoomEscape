@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\RoomEscape.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{3F702A80-5F9D-40FC-A533-26AFE4120F04}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\RoomEscape.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\RoomEscapeEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{E49FC911-A8C0-47D6-8785-51BAACD31094}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\RoomEscape">
+			<UniqueIdentifier>{A34AF517-EEAF-4EF0-AD40-48F2476425A2}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\RoomEscape\RoomEscape.Build.cs">
+			<Filter>Source\RoomEscape</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\RoomEscape\RoomEscape.cpp">
+			<Filter>Source\RoomEscape</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\RoomEscape\RoomEscape.h">
+			<Filter>Source\RoomEscape</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\RoomEscape\RoomEscapeGameModeBase.cpp">
+			<Filter>Source\RoomEscape</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\RoomEscape\RoomEscapeGameModeBase.h">
+			<Filter>Source\RoomEscape</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
