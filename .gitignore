@@ -337,10 +337,3 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
-
-Build/
-Binaries/
-DerivedDataCache/
-Intermediate/
-Saved/
-Content/StarterContent/

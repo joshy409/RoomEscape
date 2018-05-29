@@ -1,3 +1,0 @@
-C:\Users\Taekwon\source\repos\RoomEscape\Source\RoomEscape\RoomEscape.Build.cs
-C:\Users\Taekwon\source\repos\RoomEscape\Source\RoomEscape.Target.cs
-C:\Users\Taekwon\source\repos\RoomEscape\Source\RoomEscapeEditor.Target.cs
