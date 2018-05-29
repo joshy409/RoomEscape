@@ -340,3 +340,8 @@ DerivedDataCache/*
 
 # IgnoreStarting Content
 RoomEscape/Content/StarterContent
+*/Build
+*/Binaries
+*/DerivedDataCache
+*/Intermediate
+*/Saved
