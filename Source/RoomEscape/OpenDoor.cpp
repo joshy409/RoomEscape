@@ -1,6 +1,7 @@
 // Copyright Joshua Yang 2018
 
 #include "OpenDoor.h"
+#include "Engine/World.h"
 #include "GameFramework/Actor.h"
 
 
@@ -21,6 +22,7 @@ void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
 
+	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();
 	
 	
 }
@@ -32,6 +34,12 @@ void UOpenDoor::OpenDoor()
 	Owner->SetActorRotation(NewRotation);
 }
 
+void UOpenDoor::CloseDoor()
+{
+	auto Owner = GetOwner();
+	FRotator NewRotation = FRotator(0.0f, 0.0f, 0.0f);
+	Owner->SetActorRotation(NewRotation);
+}
 
 // Called every frame
 void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -42,6 +50,9 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	// if the ActorThatOPens is in the volume
 	if (PressurePlate && PressurePlate->IsOverlappingActor(ActorThatOpens)) {
 		OpenDoor();
+	}
+	else {
+		CloseDoor();
 	}
 }
 
