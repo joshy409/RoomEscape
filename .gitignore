@@ -339,4 +339,5 @@ Plugins/*/Intermediate/*
 DerivedDataCache/*
 
 # ignore starting content
-/Content/StarterContent
+/Content/StarterContent/Textures
+/Content/StarterContent/HDRI
