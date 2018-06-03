@@ -28,7 +28,7 @@ public:
 
 		
 private:
-	float Reach = 150.f;
+	float Reach = 180.f;
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 	UInputComponent* InputComponent = nullptr;
 
@@ -50,6 +50,12 @@ private:
 	// Return current end of reach line
 	FVector GetReachLineEnd();
 
+	// Return current end of reach line
+	FVector GetReachLineEnd1();
+
 	// Return current start of reach line
 	FVector GetReachLineStart();
+
+
+
 };

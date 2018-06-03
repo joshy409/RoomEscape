@@ -46,9 +46,8 @@ void UGrabber::FindPhysicsComponent()
 	}
 }
 
-void UGrabber::Grab() {
-	UE_LOG(LogTemp, Warning, TEXT("Grab Pressed"));
-	
+void UGrabber::Grab() 
+{
 	/// LINE TRACE and reach any actors with physics body collision channel set
 	auto HitResult = GetFirstPhysicsBodyInReach();
 	auto ComponentToGrab = HitResult.GetComponent(); //gets the mesh in our case
@@ -70,6 +69,7 @@ void UGrabber::Release()
 	PhysicsHandle->ReleaseComponent();
 }
 
+
 // Called every frame
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
@@ -78,10 +78,12 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 	// if the physics handle is attached
 	if (PhysicsHandle && PhysicsHandle->GetGrabbedComponent()) {
 		// move the object that we're holding
-		PhysicsHandle->SetTargetLocation(GetReachLineEnd());
+		PhysicsHandle->SetTargetLocation(GetReachLineEnd1());
 	}
 }
 
+
+// Return of this will be used to set the end of the player's reach
 FVector UGrabber::GetReachLineEnd() 
 {
 	FVector PlayerViewPointLocation;
@@ -90,6 +92,17 @@ FVector UGrabber::GetReachLineEnd()
 
 	return PlayerViewPointLocation + PlayerViewPointRotation.Vector() * Reach;
 }
+
+// Return of this will be used to position the grabbed item (so that grabbed item isn't too far away when it is grabbed
+FVector UGrabber::GetReachLineEnd1()
+{
+	FVector PlayerViewPointLocation;
+	FRotator PlayerViewPointRotation;
+	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(OUT PlayerViewPointLocation, OUT PlayerViewPointRotation);
+
+	return PlayerViewPointLocation + PlayerViewPointRotation.Vector() * 100.f;
+}
+
 
 FVector UGrabber::GetReachLineStart()
 {
